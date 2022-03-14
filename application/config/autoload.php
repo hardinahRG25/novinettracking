@@ -59,7 +59,7 @@ $autoload['packages'] = array();
   |
   |	$autoload['libraries'] = array('user_agent' => 'ua');
  */
-$autoload['libraries'] = array('database', 'template','mypdf');
+$autoload['libraries'] = array('database', 'template');
 global $access_from_outside;
 if (!isset($access_from_outside) || $access_from_outside === false || $access_from_outside === null) {
     $autoload['libraries'][] = 'session';
