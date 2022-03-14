@@ -1,0 +1,78 @@
+body {
+  background: #606060;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 350px;
+}
+.login .disclaimer {
+  margin-top: 13em;
+}
+
+.register {
+  width: 500px;
+}
+.register .disclaimer {
+  margin-top: 3em;
+}
+
+.login, .register {
+  text-align: center;
+  background: white;
+  padding: 2em;
+  margin-top: 2em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border-top: solid 0.3em #a6e22e;
+}
+.login h1, .register h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.login input[type="text"], .login input[type="password"], .login input[type="email"], .register input[type="text"], .register input[type="password"], .register input[type="email"] {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 2em;
+  border-bottom: solid 2px #EEEEEE;
+}
+.login input[type="text"]:focus, .login input[type="password"]:focus, .login input[type="email"]:focus, .register input[type="text"]:focus, .register input[type="password"]:focus, .register input[type="email"]:focus {
+  border-bottom: solid 2px #a6e22e;
+}
+.login button, .register button {
+  background: #a6e22e;
+  border-radius: 15px;
+  padding: 1em 2em;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #f2fbe1;
+  font-weight: bold;
+}
+.login button:hover, .register button:hover {
+  background: #8ac21b;
+}
+.login .disclaimer, .register .disclaimer {
+  color: #606060;
+}
+.login .disclaimer a, .register .disclaimer a {
+  color: #a6e22e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=login.css.map */

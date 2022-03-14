@@ -1,0 +1,178 @@
+/*.form-control {
+    height: inherit;
+    padding: 0;
+}
+
+.modal-custom .iziModal-content section input:not([type="checkbox"]), .modal-custom .iziModal-content section button {
+    padding: 0;
+}*/
+
+/* image thumbnail */
+.thumb {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+/* Style to article Author */
+.by-author {
+	font-style: italic;
+	line-height: 1.3;
+	color: #aab6aa;
+}
+
+/* Main Article [Module]
+-------------------------------------
+* Featured Article Thumbnail
+* have a image and a text title.
+*/
+.featured-article {
+	width: 482px;
+	height: 350px;
+	position: relative;
+	margin-bottom: 1em;
+}
+
+.featured-article .block-title {
+	/* Position & Box Model */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	/* background */
+	background: rgba(0,0,0,0.7);
+	/* Width/Height */
+	padding: .5em;
+	width: 100%;
+	/* Text color */
+	color: #fff;
+}
+
+.featured-article .block-title h2 {
+	margin: 0;
+}
+
+/* Featured Articles List [BS3]
+--------------------------------------------
+* show the last 3 articles post
+*/
+
+.main-list {
+	padding-left: .5em;
+}
+
+.main-list .media {
+	padding-bottom: .5em;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.row {
+	padding: 0px;margin: 0px;
+}
+.x_panel, .x_title {
+	margin-bottom: 0px;
+	padding: 0px;
+}
+tr:hover{
+	color: red;
+}
+tr{
+	cursor:pointer;
+}
+.x_panel, .x_title{
+	border:0px;
+}
+.tile_count{
+	margin-bottom: 5px;
+	margin-top: 1px;
+}
+body .container.body .right_col,.main_container, .left_col {
+	background:#1c313a;
+}
+.nav-md .container.body .right_col {
+	padding: 0px 0px 0;
+}
+#map {
+	height: 100%;
+	width: 100%;
+}
+#chartContainer{
+	height: 300px;
+	width: 100%;
+	background-color: rgb(28, 49, 58);
+}
+#body_content{
+	color: #fff;
+	background: #1c313a;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-55, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.table_tickets{
+	background: #1c313a;border: 5px solid #2A3F54;
+}
+.taken_tickets{
+	background: #1c313a;border: 5px solid #2A3F54;margin-top: -5px;border-top-width: 0px;
+}
+#content_ticket{
+	margin:0;margin-bottom: 2px;padding: 0px;
+}
+.article_ticket{
+	color:#cccccc;font-style: normal;font-size: 15px;padding: 0px;margin: 0px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+#platform_impacte{
+	background: #1c313a;border: 5px solid #2A3F54;border-left-width:0px;border-right-width: 0px;border-bottom-width: 0px;
+}
+#ticket_stat{
+	background: #1c313a;border: 5px solid #2A3F54;border-left-width:0px;border-right-width: 0px;border-bottom-width: 0px;
+}
+#ticket_stat_chart{
+	height: 354px; width: 100%;
+}
+#platform_impact_chart{
+	height: 353px; width: 100%;
+}
+#priority1{
+	border: 5px solid #2A3F54;background: #1c313a;border-right-width: 0px;border-left-width: 0px;
+}
+.priority{
+	align-self: center;align-content: center;
+}
+#priority2{
+	border: 5px solid #2A3F54;background: #1c313a;border-right-width:0px;
+}
+#priority3{
+	padding: 0px;border: 5px solid #2A3F54;background: #1c313a;border-right-width:0px;
+}
+#priority4{
+	padding: 0px;border: 5px solid #2A3F54;background: #1c313a;border-right-width:0px;
+}
+#map_mada{
+	background:#1c313a;height:630px;border: 5px solid #2A3F54;border-top-width:0px;
+}
+#chart_variation_ticket{
+	background:#1c313a;height: 250px;border: 5px solid #2A3F54;
+}
+.main-list:hover{
+	cursor: pointer;
+	padding-top:10px;
+	background: #2f4357;
+	font-weight: 600;
+}
+
+/* 
+--------------------------------------------
+* Add
+*/
+
+.rpannel{
+	background-color: white;
+}
+/* 
+--------------------------------------------
+* Add
+*/

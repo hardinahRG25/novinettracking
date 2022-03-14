@@ -1,0 +1,44 @@
+<div id="modalSearch" class="modaly" data-iziModal-icon="fa fa-search" style="top: -250px;">
+    <form ng-submit="goSearch()">
+        <div class="form-group row">
+            <label for="colFormLabel"
+                   class="col-sm-3 col-form-label-sm text-secondary">Test date : </label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control input-search" name="date_search"
+                       id="date_search"
+                       ng-model="search.date_search" placeholder="Search By Date ..."
+                       autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group row" ng-if="user_connected && user_connected.access === 'admin'">
+            <label for="colFormLabel" class="col-sm-3 col-form-label-sm text-secondary">Collaborateur : </label>
+            <div class="col-sm-9">
+                <select class="form-control input-search" name="search.username" ng-model="search.user_id">
+                    <option ng-repeat="user in allUser" value="{{user.id}}">
+                        {{user.mail}}&nbsp;{{user.ldap}}&nbsp;
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-3 col-form-label-sm text-secondary"> </label>
+            <div class="col-sm-9">
+                <footer style="display:flex;padding-right:0px;margin-top: 15px;">
+                    <button type="button" data-iziModal-close class="btn btn-outline-dark"
+                            style="font-size: 12px;border-radius: 0;flex:1"><i
+                            class="fa fa-times"></i>
+                        Fermer
+                    </button>
+                    <button type="button" class="btn btn-outline-danger" ng-click="resetSearch()"
+                            style="font-size: 12px;border-radius: 0px;margin:0px 5px;flex:1"><i
+                            class="fa fa-eraser"></i> Restaurer paramètre
+                    </button>
+                    <button type="submit" class="btn btn-outline-success"
+                            style="font-size: 12px;border-radius: 0px;flex:1"><i
+                            class="fa fa-search"></i> Rechercher
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </form>
+</div>

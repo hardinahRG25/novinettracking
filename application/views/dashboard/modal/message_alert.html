@@ -1,0 +1,37 @@
+<div id="messageAlertM" class="modaly" style="font-size: 12px;" data-iziModal-icon="fa fa-info">
+    <form ng-submit="confirmActionM()">
+        <br>
+        <br>
+        <div class="row" style="padding:0px;justify-content: center;align-content: center;">
+            <i id="icon_msg_alert" style="font-size: 5em"></i>
+        </div>
+        <br>
+        <div class="row" style="padding:0px;justify-content: center;align-content: center;">
+            <p style="text-align: center"><h4 class="text text-center" id="text-head"
+                                              style="font-size: 22px;text-align:center!important">Voulez-vous
+            continuer?</h4></p>
+        </div>
+        <div class="row" style="padding: 5px 0px;justify-content: center;align-content: center;">
+            <p style="text-align: center"><h4 class="text text-center" id="messageContentM"
+                                              style="font-size: 14px;text-align:center!important">
+            {{$scope.message}}</h4></p>
+        </div>
+        <br>
+        <footer style="padding-right:0px;margin-top: 5px;font-size: 12px;">
+            <div class="row" style="justify-content: center;align-content: center;">
+                <button id="btn-conf"
+                        style="font-size:18px; border-radius:100px;width:70%;border:none!important;padding:5px;"><i
+                        class="fa fa-check" id="icon-btn-con"></i> <span id="btn-text">Continuer</span></button>
+            </div>
+            <div class="row" style="justify-content: center;align-content: center;width: 100%" ng-if="to_show">
+                <hr style="width: 150px;margin: 0px;margin-top: 15px;align-self: center">
+            </div>
+            <div class="row" style="justify-content: center;align-content: center" ng-if="to_show">
+                <a href="javascript:void(0)" class="text text-warning" data-izimodal-close=""
+                   style="text-decoration: none;font-size:18px; border-radius:100px;border:none!important;padding:5px;text-align: center"><i
+                        class="fa fa-times"></i> Annuler</a>
+            </div>
+        </footer>
+        <br>
+    </form>
+</div>

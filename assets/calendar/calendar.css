@@ -1,0 +1,185 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 juin 2018, 14:56:55
+    Author     : hardinah
+*/
+
+#calendar {
+    width: 100%;
+    margin: 0 auto;
+}
+th{
+    color: #002166; 
+}
+td{
+    color: #002166;
+}
+.fc-day-grid-container.fc-scroller {
+    height: auto!important;
+    overflow-y: auto;
+}
+.fc-time-grid .fc-slats td {
+    height: 2.67em;
+}
+.fc-today {
+    background: #FFF !important;
+    border: none !important;
+    border-top: 1px solid #ddd !important;
+    font-weight: bold;
+}
+.fc-past{ background-color : #ECEFF1 } 
+.fc-future{ background-color : #fff  }
+.fc-fri { background:#EFEBE9!important; }
+.fc-sat { background:#EFEBE9!important;  }
+.fc-sun { background:#EFEBE9!important;  }
+.fc-time-grid-event{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.fc-day-grid-event{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+fc-toolbar.fc-header-toolbar{
+    margin: 0px!important;
+    padding: 0.5em;
+}
+/*.fc-state-default,.fc-center{
+    background: #00ACC1;
+    color: white;
+}*/
+/*.fc-day-header,.fc-axis{
+    background: #00BCD4!important;
+    color: white!important;
+}*/
+.fc-list-item{
+    color: #000;
+}
+/*.fc td, .fc th {
+    border-color: rgba(255,255,255,0.1);
+}*/
+
+.fc-day-grid-event.fc-content{ white-space: normal!important; }
+.fc-toolbar.fc-header-toolbar{
+    margin-bottom: 0em!important;
+    padding: 0.5em;
+}
+.ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front{
+    z-index: 999999;
+    max-height: 300px;  
+    overflow: auto;
+}
+.ui-widget-content{
+    background: #eee !important;
+}
+.ui-menu-item{
+    list-style-image:none!important;
+}
+.ui-menu-item-wrapper{
+    font-size: 12px!important;
+}
+
+
+
+
+
+.fc-time-grid-event.fc-short .fc-time span {
+    display: inline;
+}
+
+.fc-time-grid-event.fc-short .fc-time:before {
+    content: normal;
+}  
+
+.fc-time-grid-event.fc-short .fc-time:after {
+    content: normal;
+}
+.iziModal .iziModal-content {
+    padding: 0.5em!important;
+}
+#modalEvent{
+    z-index: 9999!important;
+}
+#modalAlert{
+    z-index: 9999!important;
+}
+.modaly{
+    z-index: 9999!important;
+}
+#messageAlert{
+    z-index: 9999!important;
+}
+.daterangepicker.ltr.single.opensright.show-calendar{
+    z-index: 99999!important;
+}
+.fc-day-header{
+    background-color: white!important;
+}
+.fc-center{
+    background: #ff9955!important;
+    font-weight: bold!important;
+    text-transform: uppercase!important;
+}
+.popover{      
+    max-width: 500px;
+    width: auto!important;
+}
+
+
+
+
+
+.fc-day.fc-today {
+    position: relative;
+}
+
+.fc-day.fc-today::before,
+.fc-day.fc-today::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+}   
+
+.fc-day.fc-today::before {
+    border-width: 1.5em;
+}
+
+.fc-day.fc-today::after {
+    border-radius: 0;
+    border-width: 1.5em;
+    border-right-color: #ff9955;
+    border-top-color: #ff9955;
+}
+
+.fc-annotation {
+    border-style: solid;
+    border-width: 0;
+    font-size: .85em;
+    cursor: default;
+}
+
+.fc-annotation-skin {
+    border-color: #999;     /* default BORDER color */
+    background-color: #edb; /* default BACKGROUND color */
+    color: #777;            /* default TEXT color */
+    text-align: center;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* for IE */
+}
+
+.fc-annotation.closed {
+    background-color: #f1f1f1;
+}
+
+.fc-bgevent{
+    height: 2.8em!important;
+    background: #17a2b8;
+    opacity: 1;
+}

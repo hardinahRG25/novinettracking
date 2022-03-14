@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 mai 2018, 11:24:53
+    Author     : hardinah
+*/
+
+#toast-container > .toast {
+    /* margin-top: 25%; */
+    /* margin-left: 40%; */
+    z-index: 9999!important;
+    border-radius: 0px!important;
+}
+/*#toast-container > .toast-warning:before {
+    content: "\f003";
+}
+#toast-container > .toast-error:before {
+    content: "\f001";
+}
+#toast-container > .toast-info:before {
+    content: "\f005";
+}
+#toast-container > .toast-success:before {
+    content: "\f00c";
+}*/

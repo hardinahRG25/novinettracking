@@ -1,0 +1,139 @@
+body {
+    background: #404040;
+    color: #EEEEEE;
+    font-size: 12px;
+}
+
+h2 {
+    /*font-size: 1.2em;*/
+    /*background: rgba(0, 0, 0, 0.2);*/
+}
+
+.navbar a.dropdown-item {
+    font-size: 0.8em;
+}
+
+.bg-dark {
+    box-shadow: 0 3px 3px black;
+}
+.btn{
+    font-size: 12px;
+}
+main {
+    margin-top: 55px;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 320px) {
+    .flexrow {
+        flex-direction: column;
+    }
+}
+.flexcol {
+    flex-grow: 2;
+    flex-basis: 50%;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #a6e22e;
+    padding: 0;
+    margin: 0.5em;
+}
+.card h2 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0.5em;
+    text-align: left;
+}
+.card h2.separated {
+    margin-top: 1em;
+}
+.card .card-body {
+    padding: 0 0.5em;
+}
+
+.tickets {
+    height: calc((100vh - 200px) / 2);
+}
+.tickets h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+.tickets ul {
+    list-style: none;
+    padding: 0;
+}
+.tickets ul li {
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.tickets ul li a {
+    color: #EEEEEE;
+    font-size: 0.8em;
+}
+.tickets ul li a:hover {
+    color: #a6e22e;
+}
+.tickets ul li p {
+    color: #a2a2a2;
+    font-size: 0.8em;
+    margin: 0 5px;
+}
+.tickets ul li:nth-child(even) {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.dot {
+    font-size: 1.5em;
+    line-height: 0;
+}
+
+.green {
+    color: #a6e22e;
+}
+
+.red {
+    color: #f90000;
+}
+
+.table .table {
+    background: none;
+}
+
+/***** IzyModal *******/
+.iziModal .iziModal-header {
+    background: #8ac21b;
+}
+.iziModal .iziModal-header h2 {
+    background: none;
+}
+.iziModal .iziModal-content {
+    padding: 1em;
+}
+.iziModal .iziModal-content .form-control {
+    /*border: none;
+    border-radius: 0;*/
+    box-shadow: none;
+    /*margin-bottom: 2em;
+    border-bottom: solid 2px #EEEEEE;*/
+}
+.iziModal .iziModal-content .form-control:focus {
+    border-bottom: solid 2px #a6e22e;
+}
+
+.form-control{
+    font-size: 12px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */

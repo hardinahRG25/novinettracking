@@ -1,0 +1,563 @@
+.cut-text {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+.badge-danger, .alfred-badge, .badge-warning, .badge-info, .badge-success, .badge-secondary, .badge-primary {
+    position: absolute !important;
+    right: 5px !important;
+}
+
+.alfred-badge {
+    font-size: 0.8em !important;
+}
+
+.absolute-right-export {
+    position: absolute !important;
+    background: #fff !important;
+    right: 0 !important;
+    color: #9fd72e !important;
+    cursor: pointer !important;
+}
+
+.badge-ticket-id {
+    color: #FFF !important;
+    text-align: center !important;
+    position: absolute !important;
+    right: 30px !important;
+}
+
+.header-panel {
+    display: flex !important;
+    align-items: center !important;
+    align-content: stretch !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: relative !important;
+}
+
+.header-panel-download {
+    margin-left: auto !important;
+    color: #9fd72e !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+}
+
+.header-panel-input {
+    margin: 0px !important;
+    width: 150px !important;
+    line-height: 0 !important;
+    background: #364e59 !important;
+    border-radius: 0px !important;
+    font-size: 12px !important;
+    padding: 3px !important;
+    padding-right: 25px !important;
+    color: #aaa !important;
+    border: 1px #666 solid !important;
+    margin-left: auto !important;
+}
+
+.chart-panel-header {
+    display: flex !important;
+    align-items: center !important;
+    align-content: stretch !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.h-right {
+    width: 50px !important;
+    margin-left: auto !important;
+    /*background: red !important;*/
+}
+
+.h-container {
+    background-color: #343a40 !important;
+}
+
+.event-time {
+    padding-left: 5px !important;
+}
+
+.size-8em {
+    font-size: 0.8em !important;
+}
+
+.alfred-text {
+    text-align: center !important;
+    width: 100% !important;
+    color: #a1a1a1 !important;
+    font-weight: 900 !important;
+}
+
+.divHov {
+    cursor: pointer !important;
+    position: relative !important;
+}
+
+.li-container {
+    background-color: #474747 !important;
+    cursor: pointer !important;
+}
+
+.event-source-text {
+    color: #6c757d !important;
+    padding-left: 5px !important;
+}
+
+.server-status {
+    padding: 5px !important;
+    padding-left: 0px !important;
+}
+
+.subject-text {
+    max-width: 200px !important;
+}
+
+.p-new-container {
+    display: flex !important;
+    margin-bottom: 3px !important;
+    position: relative !important;
+}
+
+.event-count {
+    padding-right: 5px !important;
+    line-height: inherit !important;
+    background: #364e59 !important;
+    border-radius: 5px !important;
+    color: #FFF !important;
+}
+
+.p-small {
+    display: flex !important;
+    margin-bottom: 3px !important;
+}
+
+.time-icon {
+    padding: 3px !important;
+    padding-left: 0px !important;
+}
+
+.left-auto-margin {
+    margin-left: auto !important;
+}
+
+.alfred-badge-text {
+    color: #5be401 !important;
+}
+
+.margin-bottom-3 {
+    margin-bottom: 3px !important;
+}
+
+.div-width-100 {
+    width: 100%
+}
+
+.img-modal-avatar {
+    border-radius: 0px !important;
+    width: 45px !important;
+    height: 45px !important;
+    object-fit: cover !important;
+}
+
+.h-name {
+    color: #6c757d !important;
+    font-size: 12px !important;
+}
+
+.avatar-comment {
+    width: 30px !important;
+    border-radius: 5px !important;
+    height: 30px !important;
+    object-fit: cover !important;
+}
+
+.avatar-comment-default {
+    width: 30px !important;
+    border-radius: 5px !important;
+}
+
+.modal-badge {
+    position: relative !important;
+}
+
+.not-asigned {
+    position: relative !important;
+    margin-left: 5px !important;
+}
+
+.size-1vw {
+    font-size: 1vw !important;
+}
+
+.flex-vw {
+    display: flex !important;
+}
+
+.color-aaa {
+    color: #aaa !important;
+}
+
+.color-bbb {
+    color: #6c757d !important;
+}
+
+.size-10px {
+    font-size: 10px !important;
+}
+
+.comment-btn {
+    align-self: flex-end !important;
+    background: transparent !important;
+    border: none !important;
+    color: #bd5b5b !important;
+}
+
+.margin-0-padding-0 {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.link-italic {
+    color: #6c757d !important;
+    font-style: italic !important;
+}
+
+.comment-edit {
+    background: transparent !important;
+    border: none !important;
+    color: #2aabd2 !important;
+    padding: 0px !important;
+}
+
+.no-decoration {
+    text-decoration: none !important;
+    color: #666 !important;
+}
+
+.h4-heading {
+    color: #666 !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.separator-hr {
+    margin-top: 0rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.grow-vw {
+    padding-right: 5px !important;
+    flex-grow: 1 !important;
+}
+
+.red-color {
+    color: red !important;
+}
+
+.form-input {
+    margin: 0px !important;
+    padding: 8px 16px !important;
+}
+
+.justify-space-between {
+    justify-content: space-between !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.modal-container {
+    overflow: auto !important;
+    background: #fff !important;
+}
+
+.floating-btn-modal {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 5px !important;
+}
+
+.properties-section {
+    background: #eee !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    padding-bottom: 2px !important;
+    right: 0 !important;
+    font-size: 12px !important;
+    width: 245px !important;
+    top: 0 !important;
+}
+
+.size-12px {
+    font-size: 12px !important;
+}
+
+.padding-em {
+    padding: 0em 0.5em !important;
+}
+
+.content-c-style {
+    margin-top: 15px !important;
+    color: #666 !important;
+    margin-bottom: 15px !important;
+    border: 2px #eee solid !important;
+}
+
+.c-child1 {
+    border: 2px #eee solid !important;
+}
+
+.c-child12 {
+    width: 245px !important;
+    background: #eee !important;
+}
+
+.art-elt {
+    color: #666 !important;
+    font-weight: bold !important;
+}
+
+.c-green {
+    color: green !important;
+}
+
+.gid-elemt {
+    color: #666 !important;
+    margin-left: auto !important;
+    font-weight: bold !important;
+}
+
+.c-666 {
+    color: #666 !important;
+}
+
+.w-45 {
+    width: 45px !important;
+}
+
+.request-container {
+    background: #fff !important;
+    padding: 0px 10px !important;
+}
+
+.user-name {
+    flex-grow: 1 !important;
+    padding-left: 5px !important;
+}
+
+.bold-elt {
+    font-weight: bold !important;
+}
+
+.desc-container {
+    flex-grow: 1 !important;
+    border: 2px #eee solid !important;
+}
+
+.desc-container-h4 {
+    color: #aaa !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-bottom: 0em !important;
+    padding: 0.5px 10px !important;
+    margin-bottom: 5px !important;
+}
+
+.desc-container-comment {
+    padding: 1.5px 10px !important;
+}
+
+.attachement-container {
+    border: 2px #eee solid !important;
+    flex-grow: 1 !important;
+    max-width: 245px !important;
+}
+
+.attachement-container-h4 {
+    color: #aaa !important;
+    font-size: 15px !important;
+    margin-bottom: 0em !important;
+    padding: 0.5px 10px !important;
+    margin-bottom: 5px
+}
+
+.attach-content {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+}
+
+.attached-item {
+    border: 2px #eee solid !important;
+    border-radius: 5px !important;
+    margin: 5px !important;
+    max-width: 150px !important;
+    height: max-content !important;
+}
+
+.file-name {
+    padding: 5px !important;
+    height: 70% !important;
+}
+
+.file-name-desc {
+    font-size: 1em !important;
+    margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    color: #9ed72c !important;
+    margin-top: 5px
+}
+
+.border-assignee {
+    border: 0.5em red !important;
+}
+
+.margin-left-15 {
+    margin-left: 15px !important;
+}
+
+.p-attache-container {
+    max-width: 700px !important;
+}
+
+.p-attache-ch1 {
+    justify-content: flex-end !important;
+    flex-wrap: wrap !important;
+}
+
+.p-attach-item {
+    border: 2px #eee solid !important;
+    border-radius: 5px !important;
+    margin: 5px !important;
+    max-width: 150px !important;
+}
+
+.flip-c {
+    text-align: center !important;
+    height: 30% !important;
+    padding: 0.1rem 0.1rem !important;
+}
+
+.flip-c-a {
+    color: #9ed72c !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.padding-5px {
+    padding: 5px !important;
+}
+
+.icon-flip {
+    font-size: 1.7em !important;
+    margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
+    color: #9ed72c !important;
+    margin-top: 5px !important;
+}
+
+.h-w-100 {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.ticket-detail-container {
+    top: 50px !important;
+    font-size: 12px !important;
+}
+
+.file-flip {
+    text-align: center !important;
+    height: 30% !important;
+    padding: 0.1rem 0.1rem !important;
+}
+
+.file-flip-a {
+    color: #9ed72c !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width: 100%
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.head-comment-c {
+    display: flex !important;
+    color: #666 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.margin-auto {
+    margin: auto !important;
+}
+
+.c-size {
+    color: #364e59 !important;
+    font-weight: 600 !important;
+}
+
+.popover {
+    max-width: max-content !important;
+}
+
+.export-item {
+    padding: 3px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+.export-item:hover {
+    background: #0c5460;
+    color: #FFF !important;
+}
+
+.export-date {
+    border-radius: 0px !important;
+    border: none !important;
+    padding: 5px !important;
+    background: #FFF;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.active_range_p {
+    background: #0c5460 !important;
+    color: #FFF !important;
+}
+
+.export-date:hover {
+    background: #0c5460 !important;
+    color: #FFF !important;
+    border-color: #0c5460 !important;
+}
+
+.export-btn-dash {
+    width: 100% !important;
+    border-radius: 0px !important;
+    display: block;
+}
+
+.hide-btn-exp-dash {
+    display: none !important;
+}
+
+.width-200 {
+    width: 200px !important;
+}
