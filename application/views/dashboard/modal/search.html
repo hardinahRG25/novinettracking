@@ -10,10 +10,19 @@
                        autocomplete="off">
             </div>
         </div>
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-3 col-form-label-sm text-secondary">Information : </label>
+            <div class="col-sm-9">
+                <select class="form-control input-search" name="search.search_detail" ng-model="search.search_detail">
+                    <option value ="avg">Moyenne par jour</option>
+                    <option value ="list">Liste requete par jour</option>
+                </select>
+            </div>
+        </div>
         <div class="form-group row" ng-if="user_connected && user_connected.access === 'admin'">
             <label for="colFormLabel" class="col-sm-3 col-form-label-sm text-secondary">Collaborateur : </label>
             <div class="col-sm-9">
-                <select class="form-control input-search" name="search.username" ng-model="search.user_id">
+                <select class="form-control input-search" name="search.user_id" ng-model="search.user_id">
                     <option ng-repeat="user in allUser" value="{{user.id}}">
                         {{user.mail}}&nbsp;{{user.ldap}}&nbsp;
                     </option>
