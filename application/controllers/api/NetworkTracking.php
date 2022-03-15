@@ -134,54 +134,72 @@ class NetworkTracking extends REST_Controller {
                 $params = array(
                     "start"=>$this->get('start'),
                     "end"=>$this->get('end'),
+                    "search_detail"=>$this->get('search_detail'),
                     "user_id"=>$this->get('user_id') ?? null
                 );
                 $datetest = $this->getDatesFromRange($params['start'],$params['end']);
                 $title = 'Moyenne de vitesse internet par jour et par collaborateur (Mbps)';
                 if($this->access != 'admin'){
-                   for ($i=0; $i <count($datetest); $i++) { 
-                        $valueUser[] = $this->getDataUser($this->id,$datetest[$i]);
-                   }
-                   $title = 'Moyenne de vitesse internet par jour (Mbps)';
-                   $datasets[] = array(
-                    'label' => $this->username,
-                    'data'=> $valueUser,
-                    'backgroundColor'=>'rgba(96, 168, 113, 0.7)',
-                    'borderColor'=>'rgba(144,238,137,1)',
-                    'borderWidth'=>1,
-                    'fill'=>true
-                   );
-                }else{
-                    if($params['user_id'] && $params['user_id'] != null){
-                        $title = 'Affichage des resultats de test (Mbps)';
+                    if($params['search_detail'] === 'avg'){
                         for ($i=0; $i <count($datetest); $i++) { 
-                            $valueUser[] = $this->getDataUser($params['user_id'],$datetest[$i]);
+                            $valueUser[] = $this->getDataUserAvg($this->id,$datetest[$i]);
                        }
-                       $user = $this->UserMepModel->get_user_by_login(array('id'=>$params['user_id']));
-                       $this->username = $user[0]['ldap'];
-                       $datasets[] = array(
+                        $title = 'Moyenne de vitesse internet par jour (Mbps)';
+                    }else{
+                        $title = 'Affichage des test internet par heure(Mbps)';
+                        $res = $this->getDataUserTime($this->id,$params['start'],$params['end']);
+                        $valueUser = $res['data'];
+                        $datetest = $res['labels'];
+                    }
+                    $datasets[] = array(
                         'label' => $this->username,
                         'data'=> $valueUser,
                         'backgroundColor'=>'rgba(96, 168, 113, 0.7)',
                         'borderColor'=>'rgba(144,238,137,1)',
                         'borderWidth'=>1,
                         'fill'=>true
-                       );
+                    );
+                }else{
+                    if($params['user_id'] && $params['user_id'] != null){
+                        $user = $this->UserMepModel->get_user_by_login(array('id'=>$params['user_id']));
+                        $this->username = $user[0]['ldap'];
+                        if($params['search_detail'] == 'avg'){
+                            $title = 'Moyenne de vitesse internet par jour (Mbps)';
+                            for ($i=0; $i <count($datetest); $i++) { 
+                                $valueUser[] = $this->getDataUserAvg($params['user_id'],$datetest[$i]);
+                            }
+                        }else{
+                            $title = 'Test vitesse internet par jour (Mbps)';
+                            $res = $this->getDataUserTime($params['user_id'],$params['start'],$params['end']);
+                            $valueUser = $res['data'];
+                            $datetest = $res['labels'];
+                        }
+                        $datasets[] = array(
+                            'label' => $this->username,
+                            'data'=> $valueUser,
+                            'backgroundColor'=>'rgba(96, 168, 113, 0.7)',
+                            'borderColor'=>'rgba(144,238,137,1)',
+                            'borderWidth'=>1,
+                            'fill'=>true
+                           );
                     }else{
                         $listUser = $this->UserMepModel->get_usermep();
-                        for ($i=0; $i <count($listUser); $i++) { 
-                            for ($d=0; $d <count($datetest) ; $d++) { 
-                                $valueUser[$i][] = $this->getDataUser($listUser[$i]['id'],$datetest[$d]);
+                        if($params['search_detail'] === 'avg'){
+                            for ($i=0; $i <count($listUser); $i++) { 
+                                for ($d=0; $d <count($datetest) ; $d++) { 
+                                    $valueUser[$i][] = $this->getDataUserAvg($listUser[$i]['id'],$datetest[$d]);
+                                }
+                                $datasets[$i] = array(
+                                    'label' => $listUser[$i]['ldap'],
+                                    'data'=> $valueUser[$i],
+                                    'borderColor'=>$bgColor[$i],
+                                    'backgroundColor'=>$bgColor[$i],
+                                    'borderWidth'=>1,
+                                    'fill'=>true
+                                   );
                             }
-                            $datasets[$i] = array(
-                                'label' => $listUser[$i]['ldap'],
-                                'data'=> $valueUser[$i],
-                                'borderColor'=>$bgColor[$i],
-                                'backgroundColor'=>$bgColor[$i],
-                                'borderWidth'=>1,
-                                'fill'=>true
-                               );
                         }
+                        
                     }                    
                 }
                 
@@ -198,7 +216,7 @@ class NetworkTracking extends REST_Controller {
              * @params integer id
              * @params date date
              */
-            public function getDataUser($id,$date){
+            public function getDataUserAvg($id,$date){
                 $array = "";
                 $array .= " user_id = '".$id."' ";
                 $array .= " AND DATE(network.create) = '".$date."' ";
@@ -208,6 +226,26 @@ class NetworkTracking extends REST_Controller {
                     $valueSpeed = floatval($res[0]['speedAvg']);
                 }
                 return $valueSpeed;
+            }
+
+            public function getDataUserTime($id,$start,$end){
+                $array = "";
+                $array .= " user_id = '".$id."' ";
+                $array .= " AND DATE(network.create) >= '".$start."' ";
+                $array .= " AND DATE(network.create) <= '".$end."' ";
+                $res = $this->NetworkModel->get_network_avg(' * ',$array);
+                $label = array();
+                $data = array();
+                if(!empty($res)){
+                    for ($i=0; $i < count($res); $i++) { 
+                        $label[$i] = $res[$i]['create'];
+                        $data[$i] = $res[$i]['speed'];
+                    }
+                }
+                return $res = [
+                    'labels' => $label,
+                    'data' => $data
+                ];
             }
             
         //List of network

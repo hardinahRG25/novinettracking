@@ -55,6 +55,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
         var ed = $scope.end.format('YYYY-MM-DD HH:mm:ss');
         $scope.search.start = sd;
         $scope.search.end = ed;
+        $scope.search.search_detail = 'avg';
         $scope.search.date_search = sd + ' - ' + ed;
         $('input[name="date_search"]').val(sd + ' - ' + ed);
 
@@ -89,7 +90,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
      */
     $scope.resetSearch = function () {
         $scope.search = {
-            sortby: "create desc",
+            search_detail: "avg",
             all: $scope.defaultVisibility
         };
         $scope.start = moment().subtract(10, 'day').startOf('day');
@@ -98,6 +99,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
         var ed = $scope.end.format('YYYY-MM-DD HH:mm:ss');
         $scope.search.start = sd;
         $scope.search.end = ed;
+        $scope.search.user_id = null;
         $scope.search.date_search = sd + ' - ' + ed;
         $('input[name="date_search"]').val(sd + ' - ' + ed);
     };
@@ -108,6 +110,12 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
      */
     $scope.getSearchResult = function (initAll) {
         $('#list_ticket').LoadingOverlay("show", $scope.globaOpt);
+        console.log($scope.search_user_id);
+        if($scope.search.all === 1 && $scope.search.search_detail == 'list' && (!$scope.search.user_id || $scope.search.user_id == null)){
+            delayToasts("error", "Vous devez saisir un utilisateur si vous choisissez de voir la liste des tests", "Graphe");
+            $('#list_ticket').LoadingOverlay("hide");
+            $scope.resetSearch();
+        }
         var url = BASE_URL + "api/NetworkTracking/userDataHistory";
         $http({
             url: url,
@@ -120,6 +128,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
             }
         }).finally(function () {
             $('#list_ticket').LoadingOverlay("hide");
+            $('#modalSearch').iziModal('close');
         });
     };
 
@@ -748,7 +757,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
                     let step = $scope.defineStepSize(array);
                     $scope[element].options.scales.yAxes[0].ticks.stepSize = step;
                     // ($scope[element].options.scales.yAxes[0].ticks.max =
-                    //   Math.ceil(Math.max.apply(Math, array)) + step);
+                    //Math.ceil(Math.max.apply(Math, array)) + step);
                     $scope[element].options.animation.duration = duration;
                     $scope[element].update();
                 } else {
@@ -869,7 +878,7 @@ app.controller("noviNet", function ($scope, $http, $interval, $location) {
         , 3600000);
     $interval(function () {
         $scope.networkTest();
-    }, 10800000); // 3h en millisencodes
+    }, 10800000); //10800000 =  3h en millisencodes
     $interval(function () {
         $scope.getLineChart(500, "event");
     }, 3600000);
